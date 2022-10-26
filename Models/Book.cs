@@ -16,7 +16,7 @@ namespace Balogh_David_Lab2.Models
         public Author? Author { get; set; }
         public int AuthorID { get; set; }
 
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public ICollection<Order>? Orders { get; set; }
     
     }
