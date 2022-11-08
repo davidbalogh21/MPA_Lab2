@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<LibraryContext>(options =>
 
-options.UseSqlite(builder.Configuration.GetConnectionString("BooksConnection")));
+options.UseSqlite(builder.Configuration.GetConnectionString("LibraryConnection")));
 
 var app = builder.Build();
 

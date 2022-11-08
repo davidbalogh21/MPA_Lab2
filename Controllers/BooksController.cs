@@ -120,7 +120,7 @@ namespace Balogh_David_Lab2
         //    ViewData["AuthorID"] = new SelectList(_context.Authors, "ID", "ID", book.AuthorID);
         //    return View(book);
         //}
-        public async Task<IActionResult> Create([Bind("Title,Author,Price")] Book book)
+        public async Task<IActionResult> Create([Bind("Title,AuthorID,Price")] Book book)
         {
             try
             {

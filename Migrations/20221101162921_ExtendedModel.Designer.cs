@@ -3,6 +3,7 @@ using System;
 using Balogh_David_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Balogh_David_Lab2.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    partial class LibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20221101162921_ExtendedModel")]
+    partial class ExtendedModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
@@ -107,10 +109,10 @@ namespace Balogh_David_Lab2.Migrations
 
             modelBuilder.Entity("Balogh_David_Lab2.Models.PublishedBook", b =>
                 {
-                    b.Property<int?>("BookID")
+                    b.Property<int>("BookID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("PublisherID")
+                    b.Property<int>("PublisherID")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("BookID", "PublisherID");

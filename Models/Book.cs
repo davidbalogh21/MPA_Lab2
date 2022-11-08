@@ -18,7 +18,7 @@ namespace Balogh_David_Lab2.Models
 
         public int Price { get; set; }
         public ICollection<Order>? Orders { get; set; }
-    
+        public ICollection<PublishedBook>? PublishedBooks { get; set; }
     }
 }
 
