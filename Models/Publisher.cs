@@ -13,7 +13,7 @@ namespace Balogh_David_Lab2.Models
 
         [StringLength(70)]
         public string Adress { get; set; }
-        public ICollection<PublishedBook>? PublishedBooks { get; set; }
+        public ICollection<PublishedBook> PublishedBooks { get; set; }
 
     }
 }
